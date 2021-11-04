@@ -7,9 +7,12 @@ use Illuminate\Http\Request;
 class AuthController extends Controller
 {
     public function index(){
-        return "<h1>Que onda perro</h1>";
+        return view('home');
     }
     public function forgot(){
-        return "<h1>Que onda perro</h1>";
+        return view('forgot');
+    }
+    public function show($user){
+        return view('profile',['user' => $user]);
     }
 }
