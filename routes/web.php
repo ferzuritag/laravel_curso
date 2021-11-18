@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\StudentsController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +15,5 @@ use App\Http\Controllers\AuthController;
 |
 */
 
-Route::get('login', [AuthController::class, 'index']);
-Route::get('forgot', [AuthController::class, 'forgot']);
-Route::get('profile/{user}', [AuthController::class, 'show']);
+Route::get('subjects', [AuthController::class, 'show']);
+Route::get('students', [StudentsController::class, 'show']);
